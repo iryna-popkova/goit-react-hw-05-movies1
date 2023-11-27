@@ -8,9 +8,9 @@ import Cast from './cast/cast';
 import Reviews from './reviews/reviews';
 import { lazy } from 'react';
 
-const listOfMovies = lazy(() => import('pages/HomePage'));
-const movieSearchForm = lazy(() => import('pages/SearchMoviesPage'));
-const movieDetails = lazy(() => import('pages/MovieDetailsPage'));
+// const listOfMovies = lazy(() => import('pages/HomePage'));
+// const movieSearchForm = lazy(() => import('pages/SearchMoviesPage'));
+// const movieDetails = lazy(() => import('pages/MovieDetailsPage'));
 
 export const App = () => {
   return (
