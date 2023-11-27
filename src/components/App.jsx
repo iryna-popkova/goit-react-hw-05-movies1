@@ -6,7 +6,7 @@ import MovieDetails from 'pages/MovieDetailsPage.js';
 import NotFoundPage from 'pages/NotFoundPage.js';
 import Cast from './cast/cast';
 import Reviews from './reviews/reviews';
-import { lazy } from 'react';
+// import { lazy } from 'react';
 
 // const listOfMovies = lazy(() => import('pages/HomePage'));
 // const movieSearchForm = lazy(() => import('pages/SearchMoviesPage'));
