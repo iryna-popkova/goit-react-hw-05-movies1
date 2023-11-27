@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import MoviesSearchForm from 'components/movieSearchForm/movieSearchForm';
 import ListOfMovies from 'components/listOfMovies/ListOfMovies';
+import { toast } from 'react-hot-toast';
 
 export default function Movies() {
   const [movies, setMovies] = useState([]);
