@@ -7,10 +7,8 @@ import ListOfMovies from 'components/listOfMovies/ListOfMovies';
 export default function Movies() {
   const [movies, setMovies] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
-  const [error, setError] = useState(false);
 
   useEffect(() => {
-    setError(false);
     const currentQuery = searchParams.get('query');
     if (!currentQuery) return;
 
@@ -19,7 +17,7 @@ export default function Movies() {
         const searchMoviesResponce = await fetchSearchMovies(currentQuery);
         setMovies(searchMoviesResponce.data.results);
       } catch (error) {
-        setError(true);
+        toast.error('Oops! Something went wrong!');
       }
     };
     onSearchMovie();
