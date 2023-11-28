@@ -23,7 +23,7 @@ export default function MovieDetailsCard({
 }) {
   return (
     <>
-      <BackPageLink to={location?.from ?? '/'}>Back to movies</BackPageLink>
+      <BackPageLink to={location}>Back to movies</BackPageLink>
       <MovieDiv>
         <MovieImg
           src={

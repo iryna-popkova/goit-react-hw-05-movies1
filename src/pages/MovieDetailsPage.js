@@ -7,7 +7,7 @@ import { Loader } from 'components/loader/loader';
 export default function MoviesDetailsPage() {
   const location = useLocation();
   const params = useParams();
-  const backLinkRef = useRef(location.state);
+  const backLinkRef = useRef(location.state?.from ?? '/');
   const [movie, setMovie] = useState({});
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
