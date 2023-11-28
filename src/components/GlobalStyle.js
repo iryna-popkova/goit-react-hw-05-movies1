@@ -28,4 +28,14 @@ ul {
     max-width: 100%;
     object-fit: cover;
   }
+
+a {
+  text-decoration:none;
+  color: darkblue;
+
+
+  &.active {
+    color: purple;
+    font-weight: bold;
+  }
 `;

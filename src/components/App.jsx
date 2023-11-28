@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import { AppLayout } from './AppLayout';
+import { AppLayout } from './layout/AppLayout';
 import NotFoundPage from 'pages/NotFoundPage.js';
 import Cast from './cast/cast';
 import Reviews from './reviews/reviews';

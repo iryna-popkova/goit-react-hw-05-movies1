@@ -1,13 +1,13 @@
 import { fetchMovieById } from 'components/apiRequest';
 import MovieDetailsCard from 'components/movieDetails/movieDetailsCard';
 import { useEffect, useRef, useState } from 'react';
-import { Link, Outlet, useLocation, useParams } from 'react-router-dom';
+import { Outlet, useLocation, useParams } from 'react-router-dom';
 import { Loader } from 'components/loader/loader';
 
 export default function MoviesDetailsPage() {
   const location = useLocation();
   const params = useParams();
-  const backLinkRef = useRef(location);
+  const backLinkRef = useRef(location.state);
   const [movie, setMovie] = useState({});
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
@@ -32,7 +32,6 @@ export default function MoviesDetailsPage() {
     <div>
       {loading && <Loader />}
       {error && <div>Cannot display any movie. Please try again.</div>}
-      <Link to={backLinkRef.current.state?.from ?? '/movie'}></Link>
       <div>
         <MovieDetailsCard
           moviePoster={movie.poster_path}
@@ -41,7 +40,7 @@ export default function MoviesDetailsPage() {
           overview={movie.overview}
           genres={movie.genres}
           score={movie.vote_average}
-          location={backLinkRef.current.state}
+          location={backLinkRef.current}
         />
       </div>
       <Outlet />

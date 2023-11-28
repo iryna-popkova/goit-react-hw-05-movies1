@@ -68,6 +68,9 @@ export const MovieLink = styled(NavLink)`
   border-radius: 4px;
   color: navy;
   font-weight: bold;
+  &.active {
+    color: purple;
+    font-weight: bold;
   }
 `;
 

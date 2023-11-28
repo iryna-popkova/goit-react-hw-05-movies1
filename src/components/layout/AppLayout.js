@@ -1,5 +1,5 @@
 import { Toaster } from 'react-hot-toast';
-import { GlobalStyle } from './GlobalStyle';
+import { GlobalStyle } from '../GlobalStyle';
 import { NavLink, Outlet } from 'react-router-dom';
 import { Layout } from './Layout';
 import { Suspense } from 'react';

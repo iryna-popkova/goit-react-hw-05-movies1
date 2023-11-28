@@ -25,14 +25,15 @@ export default function MovieDetailsCard({
     <>
       <BackPageLink to={location?.from ?? '/'}>Back to movies</BackPageLink>
       <MovieDiv>
-        {moviePoster ? (
-          <MovieImg
-            src={`https://image.tmdb.org/t/p/w500${moviePoster}`}
-            alt="Movie Poster"
-          />
-        ) : (
-          <span>No image is available</span>
-        )}
+        <MovieImg
+          src={
+            moviePoster
+              ? `https://image.tmdb.org/t/p/w500${moviePoster}`
+              : 'https://fakeimg.pl/250x400/e6dfb8/999696?text=no+image'
+          }
+          alt="Movie Poster"
+        />
+
         <MovieInfoDiv>
           <MovieTitle>{title || name}</MovieTitle>
           <UserScore>User Score: {Math.round(score)}%</UserScore>

@@ -26,7 +26,11 @@ export default function Cast() {
       {cast.map(({ id, profile_path, original_name, character }) => (
         <ListItem key={id}>
           <img
-            src={`https://image.tmdb.org/t/p/w500/${profile_path}`}
+            src={
+              profile_path
+                ? `https://image.tmdb.org/t/p/w500/${profile_path}`
+                : 'https://fakeimg.pl/250x400/e6dfb8/999696?text=no+image'
+            }
             alt={original_name}
           />
           <p>
